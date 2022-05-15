@@ -12,7 +12,6 @@ const GlobalStyle = createGlobalStyle`
   body {
     width: 100vw;
     height: 100vh;
-    background-color: #f0f2f5;
     font-family: Arial, Helvetica, sans-serif
   }
 `;
@@ -20,17 +19,22 @@ const GlobalStyle = createGlobalStyle`
 export default GlobalStyle;
 
 export const Buttom = styled.button`
-  padding: 16px 20px;
+  padding: 10px;
   outline: none;
   border: none;
   border-radius: 5px;
-  width: 100%;
   cursor: pointer;
-  background-color: #046ee5;
+  background-color: rgb(166 168 169);
   color: white;
   font-weight: 600;
   font-size: 16px;
   max-width: 350px;
+  float: right;
+  transition: 2s;
+
+  &:hover {
+    opacity: 0.3;
+  }
 `;
 
 export const Input = styled.input`
@@ -50,6 +54,8 @@ export const Container = styled.div`
   flex-direction: column;
   height: 100vh;
   gap: 20px;
+  position: relative;
+  z-index:9999;
 `;
 
 export const Title = styled.h2``;
@@ -103,3 +109,81 @@ export const AreaInput = styled.div`
   align-items: center
 `
 export const Eyes = styled.div``
+
+export const App = styled.div`
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0,0,0,0.4);
+  color: #fff;
+
+  z-index: 9999;
+
+  & input {
+    padding: .7rem 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255, 0.8);
+    background: rgba(255,255,255, 0.1);
+    color: #f8f8f8;
+  }
+
+  ::placeholder {
+    color: #f8f8f8;
+   }
+  }
+`
+export const Search = styled.div`
+    text-align: center;
+    padding: 1rem;
+`
+export const Top = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0.2rem auto 1rem auto;
+`
+export const Desc = styled.div`
+    position: relative;
+`
+
+export const Response =  styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: rgba(255,255,255, 0.2);
+`
+export const Contain = styled.div`
+    max-width: 600px;
+    height: 100px;
+    margin: auto;
+    padding: 0 1rem;
+    position: relative;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & p {
+      font-size: 1.2rem;
+    }
+
+    & h1 {
+      font-size: 3rem;
+      padding: 1.5rem;
+    }
+`
+export const Wind     = styled.div``
+
+export const Location = styled.div``
+
+export const Temp     = styled.div``
+
+export const Feels    = styled.div``
+
+export const Humidity = styled.div``
